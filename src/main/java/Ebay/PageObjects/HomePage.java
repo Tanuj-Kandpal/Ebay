@@ -38,7 +38,6 @@ public class HomePage {
     public void waitForItemListToDisplay() {
         dh.titleToContain("Book for sale", 5);
         dh.click(firstBook);
-        dh.getText(firstBook);
         dh.switchToNewWindow();
 
     }

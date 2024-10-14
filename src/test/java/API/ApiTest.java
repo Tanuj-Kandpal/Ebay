@@ -17,7 +17,7 @@ public class ApiTest {
                         .baseUri(BASE_URL)
                         .when()
                         .get()
-                        .then().extract().response().asString();
+                        .then().extract().response().prettyPrint();
 
         System.out.println("Response: " + response);
     }

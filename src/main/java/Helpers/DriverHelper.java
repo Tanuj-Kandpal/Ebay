@@ -18,13 +18,6 @@ import java.util.Properties;
 import java.util.Set;
 
 public class DriverHelper {
-    public WebDriver getDriver() {
-        return driver;
-    }
-
-    public void setDriver(WebDriver driver) {
-        this.driver = driver;
-    }
 
     WebDriver driver;
     String url, browserName;
@@ -70,7 +63,6 @@ public class DriverHelper {
 
     public void waitElementToBeClickable(String xpath, int time) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
-        // Wait for the element to be visible and clickable
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 
     }
